@@ -8,7 +8,7 @@ module.exports = {
       },
       colors: {
         frontend: {
-          purple: "hsl(259, 100 %, 65 %)",
+          purple: "hsl(259, 100%, 65%)",
           "light-red": "hsl(0, 100%, 67%)",
           "off-white": "hsl(0, 100%, 67%)",
           "light-grey": "hsl(0, 0%, 86%)",
