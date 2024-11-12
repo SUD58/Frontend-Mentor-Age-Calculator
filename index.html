@@ -34,14 +34,42 @@
       }
     </style>
   </head>
-  <body class="">
-    Day DD Month MM Year YYYY -- years -- months -- days
+  <body class="flex flex-col gap-4 items-center w-full font-poppins justify-center bg-frontend-light-grey p-8 h-svh">
+
+    <div class="flex flex-col gap-6 bg-white rounded-l-3xl w-full rounded-t-3xl rounded-br-[5rem] px-8 py-16">
+      <div class="flex gap-4 font-bold text-frontend-smokey-grey w-full text-xl tracking-wide">
+        <div class="flex flex-col w-1/3">
+          <label for="day-input" class="">DAY</labe>
+          <input id="day-input" type="number" min="1" max="31" inputmode="numeric" placeholder="DD" class="rounded-md border-2 p-2 text-black font-black w-full border-frontend-smokey-grey"/>
+        </div>
+        
+        <div class="flex flex-col w-1/3">
+          <label for="month-input" class="font-bold text-frontend-smokey-grey">MONTH</label>
+          <input id="month-input" type="number" min="1" max="12" inputmode="numeric" placeholder="MM" class="rounded-md border-2 p-2 text-black font-black border-frontend-smokey-grey"/>
+        </div>
+
+        <div class="flex flex-col w-1/3">
+          <label for="year-input" class="font-bold text-frontend-smokey-grey">YEAR</label>
+          <input id="year-input" type="number" inputmode="numeric" placeholder="YYYY" class="rounded-md border-2 p-2 text-black font-black border-frontend-smokey-grey"/>
+        </div>
+      </div>
+      <button type="submit" class="aspect-square rounded-full size-12 bg-purple-500 p-4 self-center flex justify-center items-center">
+        <object type="image/svg+xml" data="assets/images/icon-arrow.svg" class="size-6">
+          <!-- <img src="assets/images/icon-arrow.svg" alt=""> -->
+        </object>
+      </button>
+      <div class="text-5xl font-black">
+        <div> <span class="text-frontend-purple">38</span> years</div>
+        <div> <span class="text-frontend-purple">3</span> months</div>
+        <div> <span class="text-frontend-purple">26</span> days</div>
+      </div>
+    </div>
 
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="https://github.com/SUD58" target="_blank">Suhrud Shringarputale</a>.
     </div>
   </body>
 </html>
