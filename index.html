@@ -36,16 +36,17 @@
     </style>
   </head>
   <body
-    class="font-poppins bg-frontend-light-grey flex h-dvh w-full flex-col items-center justify-center gap-4 p-8"
+    class="flex h-dvh w-full flex-col items-center justify-center gap-4 bg-frontend-light-grey p-8 font-poppins"
   >
     <div
       class="flex w-full flex-col gap-6 rounded-l-3xl rounded-t-3xl rounded-br-[5rem] bg-white px-8 py-16 lg:w-2/3 lg:rounded-br-[12rem] lg:p-16 xl:w-1/2"
     >
-      <div
-        class="text-frontend-smokey-grey grid grid-cols-3 gap-4 text-sm font-bold tracking-wider lg:w-4/5"
+      <form
+        id="input-form"
+        class="grid grid-cols-3 gap-4 text-sm font-bold tracking-wider text-frontend-smokey-grey lg:w-4/5"
       >
         <div class="flex flex-col gap-1">
-          <label for="day-input" class="">DAY</label>
+          <label for="day-input" class="cursor-pointer">DAY</label>
           <input
             id="day-input"
             type="number"
@@ -53,12 +54,13 @@
             max="31"
             inputmode="numeric"
             placeholder="DD"
-            class="border-frontend-light-grey w-full rounded-md border-2 p-2 font-black text-black lg:text-2xl"
+            required
+            class="w-full cursor-pointer rounded-md border-2 border-frontend-light-grey p-2 font-black text-black outline-none focus:border-frontend-purple focus:caret-frontend-purple lg:text-3xl [&:user-invalid]:border-frontend-light-red focus:[&:user-invalid]:border-frontend-purple"
           />
         </div>
 
         <div class="flex flex-col gap-1">
-          <label for="month-input" class="">MONTH</label>
+          <label for="month-input" class="cursor-pointer">MONTH</label>
           <input
             id="month-input"
             type="number"
@@ -66,30 +68,32 @@
             max="12"
             inputmode="numeric"
             placeholder="MM"
-            class="border-frontend-light-grey rounded-md border-2 p-2 font-black text-black lg:text-2xl"
+            required
+            class="cursor-pointer rounded-md border-2 border-frontend-light-grey p-2 font-black text-black outline-none focus:border-frontend-purple focus:caret-frontend-purple lg:text-3xl [&:user-invalid]:border-frontend-light-red focus:[&:user-invalid]:border-frontend-purple"
           />
         </div>
 
         <div class="flex flex-col gap-1">
-          <label for="year-input" class="">YEAR</label>
+          <label for="year-input" class="cursor-pointer">YEAR</label>
           <input
             id="year-input"
             type="number"
             inputmode="numeric"
             placeholder="YYYY"
-            class="border-frontend-light-grey rounded-md border-2 p-2 font-black text-black lg:text-2xl"
+            required
+            class="cursor-pointer rounded-md border-2 border-frontend-light-grey p-2 font-black text-black outline-none focus:border-frontend-purple focus:caret-frontend-purple lg:text-3xl [&:user-invalid]:border-frontend-light-red focus:[&:user-invalid]:border-frontend-purple"
           />
         </div>
-      </div>
+      </form>
       <div
         class="relative mb-4 flex w-full flex-col justify-center sm:mb-6 lg:landscape:mb-6"
       >
         <div
-          class="border-frontend-light-grey absolute top-1/2 z-10 w-full border-b-2"
+          class="absolute top-1/2 z-10 w-full border-b-2 border-frontend-light-grey"
         ></div>
         <button
           type="submit"
-          class="bg-frontend-purple z-20 flex aspect-square size-12 items-center justify-center self-center rounded-full p-4 lg:size-20 lg:self-end"
+          class="z-20 flex aspect-square size-12 items-center justify-center self-center rounded-full bg-frontend-purple p-4 lg:size-20 lg:self-end"
         >
           <img
             src="assets/images/icon-arrow.svg"
