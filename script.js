@@ -21,25 +21,27 @@ let yearDifference = 0;
 
 yearInput.setAttribute("max", currentDate.getFullYear());
 
+monthInput.addEventListener("input", () => {
+  month = parseInt(monthInput.value) - 1;
+  const inputMonthLength = new Date(year, month + 1, 0);
+  dayInput.setAttribute("max", inputMonthLength.getDate());
+});
+
+dayInput.addEventListener("invalid", (event) => {
+  dayError.textContent = "Must be a valid day";
+});
+
+monthInput.addEventListener("invalid", (event) => {
+  monthError.textContent = "Must be a valid month";
+});
+
 inputForm.addEventListener("submit", (e) => {
   year = parseInt(yearInput.value);
-  month = parseInt(monthInput.value) - 1;
   day = parseInt(dayInput.value);
   inputDate.setFullYear(year, month, day);
 
-  const inputMonthLength = new Date(year, month + 1, 0);
-
-  if (day > inputMonthLength.getDate() || day < 1) {
-    dayError.textContent = "Must be a valid day";
-    e.preventDefault();
-    return;
-  }
-
-  if (month > 11 || month < 0) {
-    monthError.textContent = "Must be a valid month";
-    e.preventDefault();
-    return;
-  }
+  dayError.textContent = "";
+  monthError.textContent = "";
 
   if (inputDate > currentDate) {
     yearError.textContent = "Must be in the past";
