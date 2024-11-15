@@ -730,6 +730,16 @@ video {
   line-height: 1.25rem;
 }
 
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .font-black {
   font-weight: 900;
 }
@@ -751,6 +761,11 @@ video {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.text-frontend-light-red {
+  --tw-text-opacity: 1;
+  color: hsl(0 100% 67% / var(--tw-text-opacity));
+}
+
 .text-frontend-purple {
   --tw-text-opacity: 1;
   color: hsl(259 100% 65% / var(--tw-text-opacity));
@@ -766,28 +781,6 @@ video {
   outline-offset: 2px;
 }
 
-.\[invaliduser-\:border-frontend-light-red\] {
-  invaliduser-: border-frontend-light-red;
-}
-
-.\[user-invalid\:border-frontend-light-red\] {
-  user-invalid: border-frontend-light-red;
-}
-
-.invalid\:border-frontend-light-red:invalid {
-  --tw-border-opacity: 1;
-  border-color: hsl(0 100% 67% / var(--tw-border-opacity));
-}
-
-.invalid\:outline-frontend-light-red:invalid {
-  outline-color: hsl(0, 100%, 67%);
-}
-
-.focus\:border-red-600:focus {
-  --tw-border-opacity: 1;
-  border-color: rgb(220 38 38 / var(--tw-border-opacity));
-}
-
 .focus\:border-frontend-purple:focus {
   --tw-border-opacity: 1;
   border-color: hsl(259 100% 65% / var(--tw-border-opacity));
@@ -795,45 +788,6 @@ video {
 
 .focus\:caret-frontend-purple:focus {
   caret-color: hsl(259, 100%, 65%);
-}
-
-.focus\:outline-none:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.focus\:outline:focus {
-  outline-style: solid;
-}
-
-.focus\:outline-red-600:focus {
-  outline-color: #dc2626;
-}
-
-.focus\:outline-frontend-purple:focus {
-  outline-color: hsl(259, 100%, 65%);
-}
-
-.focus\:\[user-invalid\:border-frontend-light-red\]:focus {
-  user-invalid: border-frontend-light-red;
-}
-
-.focus\:invalid\:border-frontend-light-red:invalid:focus {
-  --tw-border-opacity: 1;
-  border-color: hsl(0 100% 67% / var(--tw-border-opacity));
-}
-
-.active\:outline-none:active {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.active\:outline-frontend-purple:active {
-  outline-color: hsl(259, 100%, 65%);
-}
-
-.active\:outline-red-600:active {
-  outline-color: #dc2626;
 }
 
 @media (min-width: 640px) {
@@ -873,34 +827,14 @@ video {
     padding: 4rem;
   }
 
-  .lg\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .lg\:text-8xl {
     font-size: 6rem;
     line-height: 1;
-  }
-
-  .lg\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
-  .lg\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
-  .lg\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
-  .lg\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 }
 
@@ -919,11 +853,6 @@ video {
 }
 
 .\[\&\:user-invalid\]\:border-frontend-light-red:user-invalid {
-  --tw-border-opacity: 1;
-  border-color: hsl(0 100% 67% / var(--tw-border-opacity));
-}
-
-.focus\:\[\&\:user-invalid\]\:border-frontend-light-red:user-invalid:focus {
   --tw-border-opacity: 1;
   border-color: hsl(0 100% 67% / var(--tw-border-opacity));
 }
