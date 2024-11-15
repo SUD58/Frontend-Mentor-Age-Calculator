@@ -28,11 +28,23 @@ monthInput.addEventListener("input", () => {
 });
 
 dayInput.addEventListener("invalid", (event) => {
-  dayError.textContent = "Must be a valid day";
+  if (dayInput.value == "") {
+    dayError.textContent = "This field is required";
+  } else {
+    dayError.textContent = "Must be a valid day";
+  }
 });
 
 monthInput.addEventListener("invalid", (event) => {
-  monthError.textContent = "Must be a valid month";
+  if (monthInput.value == "") {
+    monthError.textContent = "This field is required";
+  } else {
+    monthError.textContent = "Must be a valid month";
+  }
+});
+
+yearInput.addEventListener("invalid", (event) => {
+  yearError.textContent = "This field is required";
 });
 
 inputForm.addEventListener("submit", (e) => {
@@ -42,6 +54,7 @@ inputForm.addEventListener("submit", (e) => {
 
   dayError.textContent = "";
   monthError.textContent = "";
+  yearError.textContent = "";
 
   if (inputDate > currentDate) {
     yearError.textContent = "Must be in the past";
