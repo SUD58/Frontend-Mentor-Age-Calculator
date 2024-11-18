@@ -14,8 +14,10 @@
 
     <title>Frontend Mentor | Age calculator app</title>
 
-    <link href="./output.css" rel="stylesheet" />
     <script src="script.js" defer></script>
+    <script src="odometer.js" defer></script>
+    <link rel="stylesheet" href="odometer-theme-default.css" />
+    <link href="./output.css" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -56,7 +58,7 @@
             placeholder="DD"
             required
             autocomplete="off"
-            class="w-full cursor-pointer rounded-md border-2 border-frontend-light-grey p-2 font-black text-black outline-none focus:border-frontend-purple focus:caret-frontend-purple lg:text-3xl [&:user-invalid]:border-frontend-light-red focus:[&:user-invalid]:border-frontend-purple"
+            class="peer w-full cursor-pointer rounded-md border-2 border-frontend-light-grey p-2 font-black text-black outline-none focus:border-frontend-purple focus:caret-frontend-purple lg:text-3xl [&:user-invalid]:border-frontend-light-red focus:[&:user-invalid]:border-frontend-purple"
           />
           <small id="day-error" class="text-frontend-light-red"></small>
         </div>
@@ -111,13 +113,19 @@
       </div>
       <div class="text-5xl font-black italic lg:text-8xl">
         <div>
-          <span id="year-output" class="text-frontend-purple">--</span> years
+          <span
+            id="year-output"
+            class="odometer font-black text-frontend-purple"
+          ></span>
+          years
         </div>
         <div>
-          <span id="month-output" class="text-frontend-purple">--</span> months
+          <span id="month-output" class="odometer text-frontend-purple"></span>
+          months
         </div>
         <div>
-          <span id="day-output" class="text-frontend-purple">--</span> days
+          <span id="day-output" class="odometer text-frontend-purple"></span>
+          days
         </div>
       </div>
     </div>
